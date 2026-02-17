@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run benchmarks
-        run: cargo bench --release | tee bench_results.txt
+        run: cargo bench | tee bench_results.txt
 
       - name: Show files for debug
         run: ls -R .
