@@ -2,14 +2,14 @@
 
 Software renderer written in Rust
 
-**WIP** - Currently just renders solid colors
+**WIP** - Currently just renders shapes
 
 ## Features
 - [x] Window integration via raw-window-handle
 - [x] Clear screen with color
 - [x] Resize support
-- [ ] Draw rectangles
-- [ ] Draw circles
+- [x] Draw rectangles
+- [x] Draw circles
 - [ ] Anti-aliasing
 - [ ] Text rendering
 

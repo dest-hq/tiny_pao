@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use tiny_pao::{Canvas, Color, Position, Size};
+use tiny_pao::{Canvas, Color, Size};
 use winit::{
     application::ApplicationHandler,
     dpi::{PhysicalSize, Size as WinitSize},
@@ -53,15 +53,6 @@ impl ApplicationHandler for App {
             winit::event::WindowEvent::RedrawRequested => {
                 if let Some(canvas) = &mut self.canvas {
                     canvas.clear(Color::rgb(255, 255, 255));
-                    canvas.draw_rounded_rect(
-                        Position { x: 400, y: 400 },
-                        Size {
-                            width: 200,
-                            height: 200,
-                        },
-                        Color::rgb(0, 0, 0),
-                        30,
-                    );
                     canvas.present().unwrap();
                 }
             }

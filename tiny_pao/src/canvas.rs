@@ -51,12 +51,24 @@ where
         }
     }
 
+    pub fn draw_circle(&mut self, pos: Position, size: Size, color: Color) {
+        self.draw_rounded_rect(pos, size, color, 360);
+    }
+
     pub fn draw_rounded_rect(&mut self, pos: Position, size: Size, color: Color, radius: u32) {
         //
         // Credits:
         // https://mathworld.wolfram.com/RoundedRectangle.html
         // https://mathworld.wolfram.com/Circle.html
         //
+
+        // Get the relevant radius for size because there are moments when the radius, like 360, is bigger than the size due to errors
+        let max_radius = std::cmp::min(size.width, size.height) / 2;
+        let radius = if radius > max_radius {
+            max_radius
+        } else {
+            radius
+        };
 
         for y in 0..size.height {
             for x in 0..size.width {
@@ -66,26 +78,26 @@ where
 
                 // Top left
                 if x < radius && y < radius {
-                    dx = radius;
-                    dy = radius;
+                    dx = radius - x;
+                    dy = radius - y;
                 }
                 // Top right
-                else if x > size.width - radius && y < radius {
-                    dx = size.width - radius;
-                    dy = radius;
+                else if x >= size.width - radius && y < radius {
+                    dx = x - (size.width - radius - 1);
+                    dy = radius - y;
                 }
                 // Bottom left
-                else if x < radius && y < size.height - radius {
-                    dx = radius;
-                    dy = size.height - radius;
+                else if x < radius && y >= size.height - radius {
+                    dx = radius - x;
+                    dy = y - (size.height - radius - 1);
                 }
                 // Bottom right
-                else if x > size.width - radius && y < size.height - radius {
-                    dx = size.width - radius;
-                    dy = size.height - radius;
+                else if x >= size.width - radius && y >= size.height - radius {
+                    dx = x - (size.width - radius - 1);
+                    dy = y - (size.height - radius - 1);
                 }
 
-                if dx + dy <= radius {
+                if dx * dx + dy * dy <= radius * radius {
                     self.draw_pixel(
                         Position {
                             x: x + pos.x,
