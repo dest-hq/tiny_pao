@@ -5,7 +5,6 @@ Software renderer written in Rust
 **WIP** - Currently just renders shapes
 
 ## Features
-- [x] Window integration via raw-window-handle
 - [x] Clear screen with color
 - [x] Resize support
 - [x] Draw rectangles
@@ -14,4 +13,4 @@ Software renderer written in Rust
 - [ ] Text rendering
 
 ## Usage
-See `examples/white_window.rs`
+See `examples/src/softbuffer.rs`
