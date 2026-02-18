@@ -25,19 +25,14 @@ Benchmarks on [Ryzen 5 5625U]:
 
 ## Usage
 
-See `examples/src/text_render.rs` for a complete example with text rendering.
-```rust
-use tiny_pao::{Canvas, Color, Position, Size};
+Text Renderer Example
+`examples/src/text_render.rs`
 
-let mut canvas = Canvas::new(Size { width: 800, height: 600 }, Color::rgb(0, 0, 0);
-
-// Draw shapes
-canvas.fill_rect(Position { x: 100, y: 100 }, Size { width: 200, height: 150 }, Color::rgb(221, 39, 33);
-canvas.draw_circle(Position { x: 400, y: 300 }, Size { width: 100, height: 100 }, Color::rgb(21, 41, 219);
-
-// Get pixels for display
-let pixels = canvas.buffer();
+Run Text Renderer
+```bash
+cargo run --release --bin text_render
 ```
+<img width="500" height="500" alt="Text render example" src="https://github.com/user-attachments/assets/9fc9cad7-8e87-43c4-a6d6-38ffc852ef7f" />
 
 ## License
 
