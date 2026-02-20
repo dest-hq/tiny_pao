@@ -12,7 +12,7 @@ WIP - currently supports basic shapes and text rendering.
 - [x] Window resize support  
 - [x] Draw filled rectangles and rounded rectangles
 - [x] Draw circles
-- [x] Text rendering (Limited)
+- [x] Text rendering
 - [ ] Anti-aliasing
 - [ ] Gradients
 
