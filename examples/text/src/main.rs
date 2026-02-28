@@ -1,4 +1,4 @@
-// To run the example, execute this command: cargo run --release --bin text_render
+// To run the example, execute this command: cargo run --release -p text-cosmic
 
 use std::{num::NonZeroU32, sync::Arc};
 
@@ -102,7 +102,7 @@ impl ApplicationHandler for App {
                     // Add some text!
                     let text = std::env::args()
                         .nth(1)
-                        .unwrap_or(" Hi, Rust! 🦀 ".to_string());
+                        .unwrap_or(" Hi, Cosmic Text! 🦀 ".to_string());
                     buffer.set_text(&text, &attrs, Shaping::Advanced, None);
 
                     // Perform shaping as desired

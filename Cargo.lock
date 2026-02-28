@@ -496,9 +496,9 @@ dependencies = [
 
 [[package]]
 name = "cosmic-text"
-version = "0.17.1"
+version = "0.18.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8c5c9868e64aa6c5410629a83450e142c80e721c727a5bc0fb18107af6c2d66b"
+checksum = "bbe782a9e7520cc7de2232c957a47f99d3a35e855552677d07a557bc1a3b66ed"
 dependencies = [
  "bitflags 2.11.0",
  "fontdb",
@@ -722,17 +722,6 @@ checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
  "windows-sys 0.61.2",
-]
-
-[[package]]
-name = "examples"
-version = "0.1.0"
-dependencies = [
- "cosmic-text",
- "image",
- "softbuffer",
- "tiny-pao",
- "winit",
 ]
 
 [[package]]
@@ -960,6 +949,14 @@ name = "hermit-abi"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc0fef456e4baa96da950455cd02c081ca953b141298e41db3fc7e36b1da849c"
+
+[[package]]
+name = "image"
+version = "0.1.0"
+dependencies = [
+ "image 0.25.9",
+ "tiny-pao",
+]
 
 [[package]]
 name = "image"
@@ -2344,6 +2341,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8eab9a99a024a169fe8a903cf9d4a3b3601109bcc13bd9e3c6fff259138626c4"
 dependencies = [
  "libc",
+]
+
+[[package]]
+name = "text"
+version = "0.1.0"
+dependencies = [
+ "cosmic-text",
+ "softbuffer",
+ "tiny-pao",
+ "winit",
 ]
 
 [[package]]

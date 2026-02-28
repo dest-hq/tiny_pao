@@ -1,3 +1,5 @@
+// To run the example, execute this command: cargo run --release -p image
+
 use image::{ImageBuffer, Rgba};
 use tiny_pao::{Canvas, Color, Position, Size};
 

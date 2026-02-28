@@ -92,6 +92,14 @@ impl Canvas {
         }
     }
 
+    pub fn width(&self) -> u32 {
+        self.width
+    }
+
+    pub fn height(&self) -> u32 {
+        self.height
+    }
+
     /// Remove all stuff from canvas
     pub fn clear(&mut self, color: Color) {
         let u32_color = Color::to_argb(color.a, color.r, color.g, color.b);

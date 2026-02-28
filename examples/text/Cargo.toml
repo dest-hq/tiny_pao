@@ -1,0 +1,10 @@
+[package]
+name = "text"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+softbuffer = "0.4.8"
+cosmic-text = "0.18.2"
+tiny-pao.workspace = true
+winit = "0.30.12"
