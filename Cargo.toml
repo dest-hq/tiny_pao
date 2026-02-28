@@ -2,6 +2,10 @@
 name = "tiny-pao"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+repository = "https://github.com/dest-hq/tiny-pao"
+description = "A CPU based renderer"
+keywords = ["2d"]
 
 [workspace]
 members = ["examples/*"]
