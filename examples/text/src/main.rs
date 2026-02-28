@@ -1,4 +1,4 @@
-// To run the example, execute this command: cargo run --release -p text-cosmic
+// To run the example, execute this command: cargo run --release -p text
 
 use std::{num::NonZeroU32, sync::Arc};
 
