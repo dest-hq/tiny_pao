@@ -4,7 +4,7 @@ use std::{num::NonZeroU32, sync::Arc};
 
 use cosmic_text::{Attrs, Buffer, Color as CosmicColor, FontSystem, Metrics, Shaping, SwashCache};
 use softbuffer::{Context, Surface};
-use tiny_pao::{Canvas, Color, Position, Size};
+use pao_cpu::{Canvas, Color, Position, Size};
 use winit::{
     application::ApplicationHandler,
     dpi::{PhysicalSize, Size as WinitSize},
