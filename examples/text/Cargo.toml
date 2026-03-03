@@ -6,5 +6,5 @@ edition = "2024"
 [dependencies]
 softbuffer = "0.4.8"
 cosmic-text = "0.18.2"
-tiny-pao.workspace = true
+pao-cpu.workspace = true
 winit = "0.30.12"
