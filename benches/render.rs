@@ -1,7 +1,7 @@
 use std::hint::black_box;
 
 use criterion::{Criterion, criterion_group, criterion_main};
-use tiny_pao::{Canvas, Color, Position, Size};
+use pao_cpu::{Canvas, Color, Position, Size};
 
 fn render_bench(c: &mut Criterion) {
     // Clear bench

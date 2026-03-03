@@ -955,7 +955,7 @@ name = "image"
 version = "0.1.0"
 dependencies = [
  "image 0.25.9",
- "tiny-pao",
+ "pao-cpu",
 ]
 
 [[package]]
@@ -1650,6 +1650,13 @@ checksum = "30d5b2194ed13191c1999ae0704b7839fb18384fa22e49b57eeaa97d79ce40da"
 dependencies = [
  "libc",
  "winapi",
+]
+
+[[package]]
+name = "pao-cpu"
+version = "0.1.0"
+dependencies = [
+ "criterion",
 ]
 
 [[package]]
@@ -2348,8 +2355,8 @@ name = "text"
 version = "0.1.0"
 dependencies = [
  "cosmic-text",
+ "pao-cpu",
  "softbuffer",
- "tiny-pao",
  "winit",
 ]
 
@@ -2405,13 +2412,6 @@ dependencies = [
  "quick-error",
  "weezl",
  "zune-jpeg 0.4.21",
-]
-
-[[package]]
-name = "tiny-pao"
-version = "0.1.0"
-dependencies = [
- "criterion",
 ]
 
 [[package]]

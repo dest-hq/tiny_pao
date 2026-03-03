@@ -1,4 +1,3 @@
-// tiny_pao - CPU renderer
 mod canvas;
 mod core;
 
